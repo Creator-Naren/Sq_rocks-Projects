@@ -1,0 +1,32 @@
+OSINT PASSIVE SCAN :: example.com
+==============================================
+
+=== WHOIS ===
+  Registrar       : RESERVED-Internet Assigned Numbers Authority
+  Creation date   : 1995-08-14 04:00:00
+  Expiration date : 2027-08-13 04:00:00
+  Updated date    : 2026-08-14 08:01:43
+  Name servers    : ['ELLIOTT.NS.CLOUDFLARE.COM', 'HERA.NS.CLOUDFLARE.COM']
+
+=== DNS RECORDS ===
+  A              : ['172.66.147.243', '104.20.23.154']
+  AAAA           : ['2606:4700:8de5:72db:f2de:72:ef6b:ff98']
+  MX             : ['0 .']
+  NS             : ['hera.ns.cloudflare.com.', 'elliott.ns.cloudflare.com.']
+  TXT            : ['"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"', '"v=spf1 -all"']
+
+=== PRIMARY IP ===
+  104.20.23.154
+
+=== IP GEOLOCATION ===
+  query       : 104.20.23.154
+  country     : Canada
+  regionName  : Ontario
+  city        : Toronto
+  isp         : Cloudflare, Inc.
+  org         : Cloudflare, Inc.
+  as          : AS13335 Cloudflare, Inc.
+  coords      : 43.6532, -79.3832
+
+==============================================
+Scan complete. All data from public sources.

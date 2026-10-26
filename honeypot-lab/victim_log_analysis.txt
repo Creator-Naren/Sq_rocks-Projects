@@ -1,0 +1,30 @@
+================================================================
+BAIT-LINK HONEYPOT — CAPTURED VICTIM ANALYSIS
+================================================================
+total clicks        : 7
+unique visitors     : 7
+  human clicks      : 5
+  bot/automated     : 2
+click-through rate  : 7 unique visitors across 3 campaign(s)
+
+by campaign         : q4-payroll-email=3, benefits-sms=2, linkedin-dm=2
+by browser          : Chrome=2, Bot/CLI=2, Safari=1, Firefox=1, Edge=1
+by OS               : Windows=2, unknown=2, iOS=1, Android=1, macOS=1
+by device           : Desktop=3, Mobile=2, bot=2
+
+--- victim table (pseudonymized) ---
+visitor       clicks campaign(s)             browser   os       device   bot
+d44f00621d82  1      q4-payroll-email        Chrome    Windows  Desktop  no
+280069156f0e  1      q4-payroll-email        Safari    iOS      Mobile   no
+7088d98f8716  1      benefits-sms            Chrome    Android  Mobile   no
+cb290891ae84  1      linkedin-dm             Firefox   macOS    Desktop  no
+ec7f087df025  1      q4-payroll-email        Edge      Windows  Desktop  no
+c653457f9420  1      benefits-sms            Bot/CLI   unknown  bot      yes
+1823095092e0  1      linkedin-dm             Bot/CLI   unknown  bot      yes
+
+--- first/last click timeline ---
+first: 2026-10-15T07:10:20  last: 2026-10-15T07:10:20
+================================================================
+Interpretation: a human click on a bait link is a training moment, not an incident.
+Feed these pseudonymized stats back into awareness training; never name-and-shame.
+================================================================

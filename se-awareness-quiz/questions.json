@@ -1,0 +1,198 @@
+[
+  {
+    "id": "phish-1",
+    "category": "phishing",
+    "q": "An email from 'IT Support' says your account will be disabled and asks you to verify your password at a link. You should:",
+    "opts": [
+      "Click the link and log in quickly",
+      "Verify through the official app or call IT on a known number",
+      "Reply to the email with your password",
+      "Forward it to a colleague to check"
+    ],
+    "ans": "B",
+    "exp": "Never authenticate from an email link. Verify via the official app or a number you already trust.",
+    "trigger": "authority + urgency"
+  },
+  {
+    "id": "bait-1",
+    "category": "baiting",
+    "q": "You find a USB drive labelled 'Payroll 2026' in the parking lot. You should:",
+    "opts": [
+      "Hand it to security without plugging it in",
+      "Plug it into a work machine to scan it",
+      "Plug it into your personal laptop to see whose it is",
+      "Keep it; finders keepers"
+    ],
+    "ans": "A",
+    "exp": "Dropped media is a classic baiting vector (and modern sticks can emulate a keyboard). Hand it in untouched.",
+    "trigger": "curiosity"
+  },
+  {
+    "id": "vish-1",
+    "category": "vishing",
+    "q": "A caller claims to be the helpdesk and asks you to read out the MFA code that just arrived. You should:",
+    "opts": [
+      "Read out the code so they can fix it",
+      "Give the caller your password to speed things up",
+      "Hang up and call the helpdesk on the published number",
+      "Press 1 to speak to a supervisor"
+    ],
+    "ans": "C",
+    "exp": "No legitimate helpdesk needs your MFA code or password. Hang up and call back on a number you trust.",
+    "trigger": "authority + fear"
+  },
+  {
+    "id": "smish-1",
+    "category": "smishing",
+    "q": "A text says a parcel is held and you must pay a $1.99 fee via a link. You should:",
+    "opts": [
+      "Tap the link and pay the small fee",
+      "Reply STOP to unsubscribe",
+      "Forward the text to friends to warn them",
+      "Open the official carrier/retailer app and check your order"
+    ],
+    "ans": "D",
+    "exp": "Small unexpected fees are the pretext to harvest full card data. Never act on a delivery link; check the real app.",
+    "trigger": "urgency + scarcity"
+  },
+  {
+    "id": "bec-1",
+    "category": "bec",
+    "q": "The CEO emails you to send an urgent wire transfer and says to keep it confidential. You should:",
+    "opts": [
+      "Process the wire immediately to keep it secret",
+      "Verify by calling the executive on a known number and follow the finance process",
+      "Reply to the email to confirm the details",
+      "Ask the sender for their bank details"
+    ],
+    "ans": "B",
+    "exp": "Business email compromise relies on secrecy and urgency to bypass process. Verify out of band; never skip controls.",
+    "trigger": "authority + urgency"
+  },
+  {
+    "id": "mfa-1",
+    "category": "mfa",
+    "q": "Your phone is flooded with MFA push prompts you did not request. You should:",
+    "opts": [
+      "Approve the push so the prompts stop",
+      "Ignore it and change nothing",
+      "Deny the request and report it to security",
+      "Share the code in the work chat so IT can investigate"
+    ],
+    "ans": "C",
+    "exp": "MFA fatigue (push bombing) means someone has your password and is trying to get you to approve. Deny and report.",
+    "trigger": "fatigue + annoyance"
+  },
+  {
+    "id": "pwd-1",
+    "category": "password",
+    "q": "Which practice best defends against credential stuffing (reusing leaked passwords)?",
+    "opts": [
+      "Reuse one strong password everywhere so you never forget it",
+      "Write passwords in a shared team document",
+      "Use your pet's name plus the year",
+      "Use a password manager with unique passwords and enable MFA"
+    ],
+    "ans": "D",
+    "exp": "Unique passwords stop one breach from unlocking other accounts, and MFA blunts a stolen password.",
+    "trigger": "habit"
+  },
+  {
+    "id": "vish-2",
+    "category": "pretexting",
+    "q": "A caller says they are from your bank's fraud team and asks for the one-time code to release your card. You should:",
+    "opts": [
+      "Give the one-time code so they can release the card",
+      "Hang up and call the number printed on your card",
+      "Give your card number and CVV to verify",
+      "Provide your online banking password"
+    ],
+    "ans": "B",
+    "exp": "Banks never ask for OTPs, CVV, or passwords. A 'code we sent' request is the account-takeover pattern.",
+    "trigger": "authority + fear"
+  },
+  {
+    "id": "phys-1",
+    "category": "physical",
+    "q": "Someone without a badge follows you through the secure door carrying boxes. You should:",
+    "opts": [
+      "Politely ask them to badge in and report anyone without a badge",
+      "Hold the door - it's rude not to",
+      "Let them in if their hands are full",
+      "Assume they work there and move on"
+    ],
+    "ans": "A",
+    "exp": "Tailgating bypasses every technical control. Challenge politely and report; you will never be penalized for it.",
+    "trigger": "politeness + social pressure"
+  },
+  {
+    "id": "phish-2",
+    "category": "phishing",
+    "q": "A colleague emails an unexpected 'Benefits' spreadsheet with a prompt to 'Enable Content' to view it. You should:",
+    "opts": [
+      "Enable macros so you can see the content",
+      "Open it and see what happens",
+      "Verify the sender out of band and never enable macros from email attachments",
+      "Disable your antivirus first so it opens"
+    ],
+    "ans": "C",
+    "exp": "Macro-enabled documents are a top malware delivery vector. Confirm the sender on another channel; don't enable content.",
+    "trigger": "liking + curiosity"
+  },
+  {
+    "id": "phish-3",
+    "category": "phishing",
+    "q": "A login page looks identical to your company SSO and shows a padlock. What is the reliable check?",
+    "opts": [
+      "Enter your credentials since the page looks identical",
+      "Check the URL and reach the site by typing the known address",
+      "Trust it because it has a padlock",
+      "Test it with your work email and password"
+    ],
+    "ans": "B",
+    "exp": "Look-alike pages and TLS certificates are easy to fake. Read the domain and navigate to the site yourself.",
+    "trigger": "visual trust"
+  },
+  {
+    "id": "osint-1",
+    "category": "osint",
+    "q": "How can your own social media usage help a spear-phishing attacker?",
+    "opts": [
+      "It can't; social media is separate from work",
+      "Only if you post your password",
+      "Public role, projects, travel, and relationships feed targeted pretexts - so limit public details",
+      "It only matters for celebrities"
+    ],
+    "ans": "C",
+    "exp": "Public details become the personal hooks in spear-phishing. Tighten privacy settings and share less publicly.",
+    "trigger": "open-source reconnaissance"
+  },
+  {
+    "id": "web-1",
+    "category": "drive-by",
+    "q": "While browsing, a site shows a pop-up: 'Your Flash/plugin is outdated - download the update now.' You should:",
+    "opts": [
+      "Close it and update only through the official OS/app updater",
+      "Install the update from the pop-up",
+      "Download the installer from the pop-up link",
+      "Ignore all updates forever"
+    ],
+    "ans": "A",
+    "exp": "Fake update pop-ups deliver drive-by payloads. Patch only through built-in updaters or trusted vendor channels.",
+    "trigger": "urgency"
+  },
+  {
+    "id": "quish-1",
+    "category": "quishing",
+    "q": "An unexpected email asks you to scan a QR code to 'renew your password'. You should:",
+    "opts": [
+      "Scan the QR to reach the portal quickly",
+      "Scan it but don't enter the password",
+      "Share the QR with IT so they can scan it",
+      "Never scan QR codes from email; navigate to the official site directly"
+    ],
+    "ans": "D",
+    "exp": "QR codes hide their destination from hover/preview checks. Go to the official portal by typing the address yourself.",
+    "trigger": "urgency + convenience"
+  }
+]

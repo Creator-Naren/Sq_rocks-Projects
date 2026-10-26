@@ -1,0 +1,1 @@
+{"incident": {"type": "phishing", "severity": "HIGH", "user": "riya@sqrock.com"}, "actions": ["LOCK user account", "Revoke active sessions", "Notify SOC team", "Preserve mail logs", "Quarantine email", "Block sender domain", "Scan attachments in sandbox"], "timestamp": "2026-10-15T07:43:00"}

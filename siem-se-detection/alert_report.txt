@@ -1,0 +1,8 @@
+=== SE-SIEM ALERT REPORT ===
+[HIGH] brute_force | Brute force: riya had 3 FAILED_LOGIN attempts
+[CRITICAL] account_takeover_suspect | SUCCESS_LOGIN after brute force for riya - possible compromise
+[HIGH] suspicious_email_rule | Suspicious auto-forward rule created by admin: forward_all
+[HIGH] suspicious_email_rule | Suspicious auto-forward rule created by riya: mark_read_and_forward
+[MEDIUM] off_hours_login | Off-hours SUCCESS_LOGIN by admin from 45.33.32.156
+[MEDIUM] off_hours_login | Off-hours SUCCESS_LOGIN by admin from 45.33.32.156
+[HIGH] external_vpn | VPN login from external IP by admin: 198.51.100.23

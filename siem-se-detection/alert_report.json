@@ -1,0 +1,58 @@
+{
+  "alerts": [
+    {
+      "sev": "HIGH",
+      "cat": "brute_force",
+      "user": "riya",
+      "count": 3,
+      "ips": [
+        "198.51.100.23"
+      ],
+      "msg": "Brute force: riya had 3 FAILED_LOGIN attempts"
+    },
+    {
+      "sev": "CRITICAL",
+      "cat": "account_takeover_suspect",
+      "user": "riya",
+      "msg": "SUCCESS_LOGIN after brute force for riya - possible compromise"
+    },
+    {
+      "sev": "HIGH",
+      "cat": "suspicious_email_rule",
+      "user": "admin",
+      "rule": "forward_all",
+      "msg": "Suspicious auto-forward rule created by admin: forward_all"
+    },
+    {
+      "sev": "HIGH",
+      "cat": "suspicious_email_rule",
+      "user": "riya",
+      "rule": "mark_read_and_forward",
+      "msg": "Suspicious auto-forward rule created by riya: mark_read_and_forward"
+    },
+    {
+      "sev": "MEDIUM",
+      "cat": "off_hours_login",
+      "user": "admin",
+      "ip": "45.33.32.156",
+      "time": "02:34",
+      "msg": "Off-hours SUCCESS_LOGIN by admin from 45.33.32.156"
+    },
+    {
+      "sev": "MEDIUM",
+      "cat": "off_hours_login",
+      "user": "admin",
+      "ip": "45.33.32.156",
+      "time": "22:45",
+      "msg": "Off-hours SUCCESS_LOGIN by admin from 45.33.32.156"
+    },
+    {
+      "sev": "HIGH",
+      "cat": "external_vpn",
+      "user": "admin",
+      "ip": "198.51.100.23",
+      "msg": "VPN login from external IP by admin: 198.51.100.23"
+    }
+  ],
+  "events": 11
+}

@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-10-10T07:38:02.872316+00:00",
+  "username": "torvalds",
+  "identity": {
+    "name": "Linus Torvalds",
+    "company": "Linux Foundation",
+    "location": "Portland, OR",
+    "bio": null,
+    "blog": "",
+    "twitter": null,
+    "public_email": null,
+    "hireable": null,
+    "account_created": "2011-09-03T15:26:22Z"
+  },
+  "social_graph": {
+    "followers": 327025,
+    "following": 0,
+    "public_repos": 12,
+    "public_gists": 1
+  },
+  "technical_fingerprint": {
+    "top_languages": {
+      "C": 10,
+      "OpenSCAD": 1,
+      "C++": 1
+    },
+    "repo_topics": [],
+    "recent_repos": [
+      {
+        "name": "linux",
+        "updated": "2026-10-09",
+        "language": "C",
+        "stars": 251402
+      },
+      {
+        "name": "GuitarPedal",
+        "updated": "2026-10-05",
+        "language": "C",
+        "stars": 2444
+      },
+      {
+        "name": "uemacs",
+        "updated": "2026-08-06",
+        "language": "C",
+        "stars": 2165
+      },
+      {
+        "name": "AudioNoise",
+        "updated": "2026-05-08",
+        "language": "C",
+        "stars": 4510
+      },
+      {
+        "name": "libgit2",
+        "updated": "2023-12-19",
+        "language": "C",
+        "stars": 393
+      }
+    ],
+    "fork_count": 3
+  },
+  "exposure_findings": [
+    {
+      "item": "employer",
+      "detail": "Employer disclosed: Linux Foundation",
+      "weight": 15
+    },
+    {
+      "item": "location",
+      "detail": "Location disclosed: Portland, OR",
+      "weight": 10
+    },
+    {
+      "item": "tech_stack",
+      "detail": "Languages reveal frameworks/tools an attacker can pretext around: C, OpenSCAD, C++",
+      "weight": 15
+    },
+    {
+      "item": "influence",
+      "detail": "Notable follower graph aids impersonation/rapport",
+      "weight": 5
+    }
+  ],
+  "footprint_score": 45
+}

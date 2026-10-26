@@ -1,0 +1,33 @@
+Phishing URL Scorer - Test Results
+==================================
+Script: phish_score.py
+Thresholds: >=70 HIGH RISK | 40-69 SUSPICIOUS | <40 LIKELY SAFE
+
+URL                                              Risk   Verdict
+--------------------------------------------------------------------------
+https://paypal-login.evil.com/verify             40%    SUSPICIOUS
+https://github.com                               0%     LIKELY SAFE
+http://192.168.1.1/login                         70%    HIGH RISK
+https://paypal.com.secure-update.top/account     75%    HIGH RISK
+https://www.google.com/search?q=login            0%     LIKELY SAFE
+http://xn--pypal-4ve.com/secure                  60%    SUSPICIOUS
+https://user@bank.verify.evil.co/update          65%    SUSPICIOUS
+
+Scoring rules
+-------------
++30  not HTTPS
++20  each phishing keyword in host (login, verify, secure, update, account,
+      bank, paypal)
++25  more than 3 dots in host (deep subdomain abuse)
++40  IPv4 address in host
++25  '@' anywhere in URL (user-info trick / URL hiding)
++30  punycode label (xn--) -> homograph attack
++15  suspicious TLD (.zip .mov .top .xyz .tk .click .link)
+Score capped at 100.
+
+Notes
+-----
+- github.com and the google.com search URL correctly score 0%.
+- Keyword check looks for substrings in the host, so partial words can add
+  points; a real registered-domain parse (tldextract / PSL) would reduce
+  false positives.

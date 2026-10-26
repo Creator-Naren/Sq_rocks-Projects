@@ -1,0 +1,140 @@
+
+=== SPEAR-PHISH AWARENESS EMAIL DRAFT 1/3 ===
+Scenario    : Account Suspension / Unusual Login
+Vector      : credential-harvest link, spoofed IT sender
+Target      : Riya Sharma — Sqrock (Bangalore, India)
+From        : it-support@sqrock.example   [SPOOFED — lab simulation]
+To          : riya@sqrock.example
+Subject     : Action Required: Your Sqrock account will be disabled
+
+[EMAIL BODY]
+Hi Riya,
+
+Our security team noticed a login to your Sqrock account from
+Bangalore, India at 23:41 yesterday.
+
+If this wasn't you, verify your account within 24 hours to avoid
+suspension:
+
+[Verify Account] -> https://lab.internal/awareness-test
+
+If you recognize this activity, no action is needed after verifying.
+
+Regards,
+IT Security Team
+Sqrock
+
+[RED FLAGS for Awareness]
+  -> Manufactured crisis: a 24-hour deadline exists to stop you from verifying anything.
+  -> Hover the button — trust the destination domain, never the label text. This lab link resolves to lab.internal.
+  -> Real lockout notices also arrive as an in-portal banner or MFA prompt; a cold email alone is not how IT suspends accounts.
+  -> The login-from-your-city detail is OSINT garnish — knowing your city proves the sender knows nothing.
+  -> Verify out of band: open the portal yourself or call the helpdesk number in the internal directory.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - AUTHORITY: Impersonates a trusted role (IT, helpdesk, People Ops) so the target defers instead of questioning.
+  - FEAR: Threatens loss (locked account, lost access) to trigger fast, emotion-driven compliance.
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+
+[DEBRIEF]
+Trainer: Ask what made it feel authentic — the location detail usually wins. Reinforce the portal-first habit: never click a security email's link, type the address yourself.
+
+
+=== SPEAR-PHISH AWARENESS EMAIL DRAFT 2/3 ===
+Scenario    : Shared Document / Attachment Lure
+Vector      : malicious attachment, spoofed colleague display name
+Target      : Arjun Mehta — Northwind Labs (Pune, India)
+From        : asha.kulkarni@northwindlabs.example   [SPOOFED — lab simulation]
+To          : arjun.mehta@northwindlabs.example
+Attachment : Benefits_Enrollment_Q4.xlsm
+Subject     : Arjun Mehta shared "Benefits_Enrollment_Q4.xlsm" with you
+
+[EMAIL BODY]
+Hi Arjun,
+
+Your Northwind Labs benefits enrollment sheet is ready for review. I've
+attached it here so you don't have to hunt for it in the portal.
+
+[Benefits_Enrollment_Q4.xlsm] -> https://lab.internal/awareness-test
+
+Please open it before Friday's cutoff — everyone on the People team has
+already signed theirs.
+
+Thanks,
+Asha
+People Operations, Northwind Labs
+
+[RED FLAGS for Awareness]
+  -> Unexpected attachment — '.xlsm' means macros; watch for double-extension tricks like 'sheet.xlsx.hta'.
+  -> 'Enable Content' to unlock the document is the payload, not a permission prompt.
+  -> A familiar display name proves nothing; the sending domain must match the colleague's real company domain.
+  -> 'Everyone already signed' pressures you into being the one who hasn't — social proof on a deadline.
+  -> Confirm via chat with the supposed sender before touching the file — never reply to the email to ask.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - LIKING: A familiar colleague's name and friendly tone build rapport and social obligation to reciprocate.
+  - SOCIAL_PROOF: Claims others already complied, so compliance feels like the norm.
+  - CURIOSITY: A document or notification that seems to concern the target personally pulls them into opening it.
+
+[DEBRIEF]
+Trainer: Run the extension drill: have trainees state what each part of 'Benefits_Enrollment_Q4.xlsm' and a '.xlsx.hta' variant actually executes. Point at DMARC in the companion guide — lookalike senders are exactly what it cannot stop.
+
+
+=== SPEAR-PHISH AWARENESS EMAIL DRAFT 3/3 ===
+Scenario    : Password Expiry / QR Code (Quishing)
+Vector      : quishing — QR code hides the real destination
+Target      : Elena Petrova — Meridian Finance (Berlin, Germany)
+From        : password-services@meridianfinance.example   [SPOOFED — lab simulation]
+To          : elena.petrova@meridianfinance.example
+Subject     : Your Meridian Finance password expires today at 17:00
+
+[EMAIL BODY]
+Hi Elena,
+
+Your Meridian Finance single sign-on password expires today at 17:00.
+
+Scan the QR code below (or use the link) to renew it and keep your
+session active:
+
++-------------------------------------------+
+|  QR: https://lab.internal/awareness-test  |
++-------------------------------------------+
+
+[Renew My Password] -> https://lab.internal/awareness-test
+
+After 17:00, access requires an in-person helpdesk reset.
+
+Regards,
+Identity Team
+Meridian Finance
+
+[RED FLAGS for Awareness]
+  -> QR codes defeat 'hover to preview' — a scan shows no destination until you have already opened it.
+  -> Password expiry never arrives as a same-day cold email; organizations warn weeks in advance via portal and manager notices.
+  -> An 'in-person reset' threat exists only to make scanning feel like the easy option.
+  -> Never log in from a page reached by scanning an email — type the SSO portal address yourself.
+  -> Report these to the real IT team: same-day expiry + QR = high confidence phish.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+  - FEAR: Threatens loss (locked account, lost access) to trigger fast, emotion-driven compliance.
+  - AUTHORITY: Impersonates a trusted role (IT, helpdesk, People Ops) so the target defers instead of questioning.
+
+[DEBRIEF]
+Trainer: Contrast this with template 1: both harvest credentials, but the QR removes the one habit people have (hover the link). Teach 'scan nothing from email' as a flat rule.
+
+
+================ DEFENSE MAPPING (see DMARC_SPF_DKIM_GUIDE.md) ================
+
+Draft 1 — same-domain spoof of it-support@
+         Stops with: DMARC p=reject + DKIM/SPF alignment on your domain.
+Draft 2 — lookalike sender domain + attachment
+         Email auth CANNOT stop this (sender is a different domain).
+         Stops with: external-sender banners, attachment sandboxing, training.
+Draft 3 — legitimate-looking link behind a QR code
+         Email auth CANNOT stop this (payload is in the rendered image).
+         Stops with: URL rewriting/safe-links, QR scanning policy, training.
+
+Counter-habit for every draft: stop, open the official portal yourself,
+verify through an independent channel before acting.
+==============================================================================

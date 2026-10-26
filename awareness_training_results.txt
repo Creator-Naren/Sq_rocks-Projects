@@ -1,0 +1,138 @@
+
+=== VISHING AWARENESS SCRIPT ===
+Scenario    : IT Helpdesk Password Reset
+Caller Role : IT Support
+Target Org  : Sqrock IT
+Pretext     : Password Reset / unusual login activity
+
+[OPENER]  'Hi, this is Narendra Borhade from IT Support at Sqrock IT. We detected unusual activity on your account.'
+[HOOK]    'I need to verify your identity — can you confirm your employee ID and current password?'
+[URGENCY] 'Security wants this closed within the hour or your account gets suspended.'
+[ASK]     'Just read me the code when it lands on your phone.'
+
+[RED FLAGS for Awareness]
+  -> Legitimate IT will NEVER ask for passwords.
+  -> MFA codes must never be shared — no real helpdesk requests them.
+  -> Always verify via official internal channels (call back on the published helpdesk number).
+  -> Unexpected contact about 'unusual activity' is a manufactured crisis.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - AUTHORITY: Impersonates a trusted role (IT, banker, official) so the target defers instead of questioning.
+  - FEAR: Threatens loss (locked account, frozen funds, warrant) to trigger fast, emotion-driven compliance.
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+  - LIKING: Friendly, helpful tone and first-name basis build rapport and social obligation to reciprocate.
+
+[DEBRIEF]
+Trainer: ask the trainee what tipped them off. Reinforce the call-back rule — hang up, dial the known internal number, and ask if a ticket exists.
+
+
+=== VISHING AWARENESS SCRIPT ===
+Scenario    : Bank Card Fraud Alert
+Caller Role : Fraud Department
+Target Org  : First Meridian Bank
+Pretext     : Unauthorized transaction pending on debit card
+
+[OPENER]  'Good morning, this is Narendra Borhade calling from the First Meridian Bank fraud team regarding your account.'
+[HOOK]    'We blocked a $2,400 charge, but to release your card I must verify you — full name, and the one-time code we just sent.'
+[URGENCY] 'If we don't confirm in the next 10 minutes the card will be permanently declined.'
+[ASK]     'Confirm the 6-digit code so I can reverse the fraud hold.'
+
+[RED FLAGS for Awareness]
+  -> Banks never ask for OTP/CVV or full card details by phone.
+  -> Caller ID is trivially spoofed — a real bank name proves nothing.
+  -> The 'code we just sent' is the smishing/vishing 2FA-bypass pattern.
+  -> Hang up and call the number on the back of your card.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - AUTHORITY: Impersonates a trusted role (IT, banker, official) so the target defers instead of questioning.
+  - FEAR: Threatens loss (locked account, frozen funds, warrant) to trigger fast, emotion-driven compliance.
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+  - PRETEXT_CONSISTENCY: A detailed, plausible story that answers questions before they are asked reduces suspicion.
+
+[DEBRIEF]
+Trainer: highlight that the caller already 'knew' the target — partial knowledge is manufactured, not proof of legitimacy.
+
+
+=== VISHING AWARENESS SCRIPT ===
+Scenario    : Government Tax Warrant Notice
+Caller Role : Tax Enforcement Officer
+Target Org  : State Revenue Agency
+Pretext     : Unpaid taxes / outstanding warrant
+
+[OPENER]  'This is Narendra Borhade with the State Revenue Agency. This call is being recorded for compliance.'
+[HOOK]    'There is a warrant for your arrest over unpaid taxes. You can resolve it today with a settlement payment.'
+[URGENCY] 'A field officer is dispatched unless payment clears within 30 minutes.'
+[ASK]     'Read me the routing number so we can process the settlement.'
+
+[RED FLAGS for Awareness]
+  -> Government agencies initiate contact by official mail, not threats by phone.
+  -> No agency demands immediate payment or banking details under arrest threats.
+  -> 'This call is recorded' is theater designed to borrow legitimacy.
+  -> Verify independently via the agency's published website/number.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - AUTHORITY: Impersonates a trusted role (IT, banker, official) so the target defers instead of questioning.
+  - FEAR: Threatens loss (locked account, frozen funds, warrant) to trigger fast, emotion-driven compliance.
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+  - PRETEXT_CONSISTENCY: A detailed, plausible story that answers questions before they are asked reduces suspicion.
+
+[DEBRIEF]
+Trainer: contrast real agency procedures (written notices, appeal windows) with the script's impossible timeline.
+
+
+=== SMISHING AWARENESS SCRIPT ===
+Scenario    : Package Delivery Smish
+Sender ID   : Narendra Borhade  (spoofed display name)
+Target Org  : National Parcel Service
+Pretext     : Held parcel awaiting fee payment
+
+[MESSAGE]
+'NPS: Your parcel is on hold. A $1.99 fee is required for re-delivery.'
+'Track & pay: npspay.example/r/8xQ'
+'Pay within 2 hours to avoid return to sender.'
+'Tap the link and enter card details to release delivery.'
+
+[RED FLAGS for Awareness]
+  -> Shortened/lookalike domains are the #1 smishing indicator.
+  -> Tiny unexpected fees are the pretext for harvesting full card data.
+  -> Carriers never collect payment via text links.
+  -> Type the official site yourself; never tap the link.
+
+[PSYCHOLOGICAL TRIGGERS]
+  - URGENCY: A countdown suppresses verification habits — act now, think later is the attacker's goal.
+  - FEAR: Threatens loss (locked account, frozen funds, warrant) to trigger fast, emotion-driven compliance.
+  - SCARCITY: An expiring benefit or limited window pushes the target to act before thinking.
+  - SOCIAL_PROOF: Claims others already complied, so compliance feels like the norm.
+
+[DEBRIEF]
+Trainer: run the 'hover before you click' rule and show how the displayed brand differs from the actual URL.
+
+
+================ PSYCHOLOGICAL TRIGGER ANALYSIS ================
+
+IT Helpdesk Password Reset (vishing)
+  authority, fear, urgency, liking
+
+Bank Card Fraud Alert (vishing)
+  authority, fear, urgency, pretext_consistency
+
+Government Tax Warrant Notice (vishing)
+  authority, fear, urgency, pretext_consistency
+
+Package Delivery Smish (smishing)
+  urgency, fear, scarcity, social_proof
+
+--- Frequency across all scripts ---
+  fear                   4/4
+  urgency                4/4
+  authority              3/4
+  pretext_consistency    2/4
+  liking                 1/4
+  scarcity               1/4
+  social_proof           1/4
+
+Key takeaway: fear + urgency appear in all scripts; authority in
+every voice script. Training should teach ONE counter-habit: stop and
+verify through an independent channel (official number / internal
+portal) before acting.
+===============================================================

@@ -1,0 +1,48 @@
+{
+  "dataset": "phish_email_dataset.csv",
+  "test_size": 0.3,
+  "accuracy": 0.8,
+  "confusion_matrix": [
+    [
+      8,
+      1
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n       LEGIT       0.80      0.89      0.84         9\n    PHISHING       0.80      0.67      0.73         6\n\n    accuracy                           0.80        15\n   macro avg       0.80      0.78      0.78        15\nweighted avg       0.80      0.80      0.80        15\n",
+  "test_predictions": [
+    {
+      "text": "Please verify your PayPal login immediately",
+      "label": 1,
+      "pred": "PHISHING"
+    },
+    {
+      "text": "Meeting notes from yesterday's client call",
+      "label": 0,
+      "pred": "LEGIT"
+    },
+    {
+      "text": "Update your bank details to avoid account closure",
+      "label": 1,
+      "pred": "PHISHING"
+    },
+    {
+      "text": "Reminder: Submit your timesheet before Friday",
+      "label": 0,
+      "pred": "LEGIT"
+    },
+    {
+      "text": "You have an undelivered package; pay the fee",
+      "label": 0,
+      "pred": "LEGIT"
+    },
+    {
+      "text": "Weekly engineering report attached",
+      "label": 0,
+      "pred": "LEGIT"
+    }
+  ]
+}

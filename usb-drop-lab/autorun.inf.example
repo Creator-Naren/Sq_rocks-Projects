@@ -1,0 +1,21 @@
+; ==========================================================================
+;  USB-DROP TRAINING SIMULATION ARTIFACT -- DO NOT DEPLOY
+;
+;  This is the AutoRun descriptor an attacker would have placed on a dropped
+;  USB stick during the era when insertion auto-ran a program. It is kept
+;  here so trainees can recognize the file defenders hunt for.
+;
+;  On Windows 7 and later, AutoRun for USB mass storage is DISABLED: the
+;  `open=` line below is ignored, and inserting a drive only raises an
+;  AutoPlay prompt (which, if enabled, still asks the user to choose).
+;  That is why modern USB-drop attacks lean on human double-clicks (LNK
+;  files with tempting names) or BadUSB/HID firmware instead.
+;
+;  Bait label: a dropped drive is named to invite opening, e.g. names like
+;  "PAYROLL_Q4", "CONFIDENTIAL", "PHOTOS", or an owner's name.
+; ==========================================================================
+[AutoRun]
+label=PAYROLL_Q4
+action=Open folder to view files
+open=launch_sim.py
+icon=%SystemRoot%\system32\SHELL32.dll,4

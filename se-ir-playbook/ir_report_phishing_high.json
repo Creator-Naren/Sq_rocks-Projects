@@ -1,0 +1,25 @@
+{
+  "incident": {
+    "type": "phishing",
+    "severity": "HIGH",
+    "user": "riya@sqrock.com",
+    "related_alerts": [
+      "brute_force,success_after_brute"
+    ]
+  },
+  "actions": [
+    "LOCK user account",
+    "Revoke active sessions",
+    "Notify SOC team",
+    "Preserve mail logs",
+    "Disable compromised OAuth/IMAP/SMTP access",
+    "Notify affected parties if exfiltration possible",
+    "Quarantine reported email(s)",
+    "Block sender domain and URLs",
+    "Scan attachments/URLs in sandbox",
+    "Search for other recipients of same campaign",
+    "Remove phishing emails from user inboxes if still present"
+  ],
+  "timestamp": "2026-10-15T07:56:12",
+  "playbook_version": "1.0"
+}

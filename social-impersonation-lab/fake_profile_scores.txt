@@ -1,0 +1,54 @@
+
+==============================================================
+PROFILE 1: @ananya_rao
+  Score   : 0%   Verdict: LIKELY GENUINE
+  Signals fired:
+    (none)
+==============================================================
+
+==============================================================
+PROFILE 2: @crypto_giveaway_100x8843
+  Score   : 100%   Verdict: HIGH — likely fake/bot
+  >>> IMPERSONATION OF A KNOWN ACCOUNT DETECTED <<<
+  Signals fired:
+    + 30  age:brand_new                          created 4d ago (<1 week)
+    + 25  graph:mass_follow                      following/followers = 415.0 (>10)
+    + 25  impersonation:cloned_photo             photo matches real @vikramceo
+    + 20  content:no_pic                         no profile photo
+    + 15  content:few_posts                      only 0 posts
+    + 10  content:default_bio                    empty/default bio
+    + 10  identity:generic_name                  display name 'Crypto Giveaway 100x' uses digits/scam words
+    + 10  identity:auto_handle                   handle 'crypto_giveaway_100x8843' looks auto-generated
+==============================================================
+
+==============================================================
+PROFILE 3: @priya.sharma_
+  Score   : 77%   Verdict: HIGH — likely fake/bot
+  >>> IMPERSONATION OF A KNOWN ACCOUNT DETECTED <<<
+  Signals fired:
+    + 25  graph:mass_follow                      following/followers = 10.6 (>10)
+    + 25  impersonation:cloned_photo             photo matches real @priyasharma
+    + 15  content:few_posts                      only 3 posts
+    + 12  age:brand_new                          created 40d ago (<3 months)
+==============================================================
+
+==============================================================
+PROFILE 4: @arjun_m
+  Score   : 65%   Verdict: SUSPICIOUS — investigate
+  Signals fired:
+    + 25  graph:mass_follow                      following/followers = 53.3 (>10)
+    + 15  graph:following_ceiling                follows 8000 (near platform/API ceiling)
+    + 15  content:few_posts                      only 2 posts
+    + 10  content:dormant_old                    2100d old account with 2 posts (dormant or hijacked)
+==============================================================
+
+==============================================================
+PROFILE 5: @sarah.j
+  Score   : 32%   Verdict: LOW — weak signals
+  Signals fired:
+    + 22  age:brand_new                          created 20d ago (<1 month)
+    + 10  content:default_bio                    empty/default bio
+==============================================================
+
+Scored 5 profile(s); reported 5 (min-score=0).
+Reminder: heuristics flag *risk*, not proof — verify before acting.
